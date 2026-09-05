@@ -245,6 +245,40 @@ content:
         type: string
         required: true
         description: "مثال: media_buying"
+      - name: sales_variant
+        label: تصميم بيعي للمنتج
+        type: boolean
+        default: false
+      - name: hide_site_link
+        label: منع اللوجو من فتح الموقع
+        type: boolean
+        default: false
+      - name: price
+        label: السعر
+        type: string
+      - name: old_price
+        label: السعر القديم الاختياري
+        type: string
+      - name: offer_note
+        label: وصف العرض بجوار السعر
+        type: text
+      - name: whatsapp_url
+        label: رابط واتساب للطلب
+        type: string
+      - name: feature_gallery
+        label: صور استعراض المميزات
+        type: image
+        description: ارفع لقطات فعلية للموقع ولوحة التحكم بنسبة 16:9.
+        options:
+          media: covers
+          multiple:
+            max: 12
+          unique: true
+          rename: safe
+      - name: offer_points
+        label: نقاط الباقة بجوار السعر
+        type: string
+        list: true
       - name: eyebrow
         label: السطر الصغير أعلى العنوان
         type: string
