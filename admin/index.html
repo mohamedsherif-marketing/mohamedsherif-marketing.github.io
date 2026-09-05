@@ -5,63 +5,33 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
   <title>Content Studio | Mohamed Sherif</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="admin.css"><link rel="stylesheet" href="cms.css">
 </head>
 <body>
   <div class="app-shell">
     <aside class="sidebar">
       <a class="admin-brand" href="../index.html"><span>MS</span><div><b>Content Studio</b><small>Mohamed Sherif</small></div></a>
       <nav>
-        <button class="side-link active" data-view="overview"><i>⌂</i>نظرة عامة</button>
-        <button class="side-link" data-view="articles"><i>▤</i>المقالات <em id="articleCount">0</em></button>
-        <button class="side-link" data-view="cases"><i>◫</i>دراسات الحالة <em id="caseCount">0</em></button>
-        <button class="side-link" data-view="media"><i>◉</i>مكتبة الوسائط</button>
+        <a class="side-link active" href="#overview"><i>⌂</i>نظرة عامة</a>
+        <a class="side-link" href="https://app.pagescms.org" target="_blank" rel="noopener"><i>▤</i>المقالات</a>
+        <a class="side-link" href="https://app.pagescms.org" target="_blank" rel="noopener"><i>◫</i>دراسات الحالة</a>
+        <a class="side-link" href="https://app.pagescms.org" target="_blank" rel="noopener"><i>◉</i>مكتبة الوسائط</a>
       </nav>
-      <div class="connection-card"><span class="status-dot"></span><div><b>وضع تجريبي</b><small>يُربط بـGitHub بعد إنشاء الحساب</small></div></div>
+      <div class="connection-card"><span class="status-dot"></span><div><b>GitHub جاهز</b><small>المحتوى يُحفظ كملفات آمنة</small></div></div>
       <a class="back-link" href="../index.html">← العودة إلى الموقع</a>
     </aside>
-
-    <main class="workspace">
-      <header class="topbar"><button class="mobile-menu" aria-label="فتح القائمة">☰</button><div><small>لوحة إدارة المحتوى</small><h1 id="viewTitle">نظرة عامة</h1></div><div class="top-actions"><button class="btn secondary" id="exportAll">تصدير المحتوى</button><button class="btn primary" id="newContent">＋ محتوى جديد</button></div></header>
-
-      <section class="view active" id="overviewView">
-        <div class="stats"><article><small>إجمالي المحتوى</small><strong id="totalCount">0</strong><span>مقال ودراسة حالة</span></article><article><small>منشور</small><strong id="publishedCount">0</strong><span>ظاهر على الموقع</span></article><article><small>مسودات</small><strong id="draftCount">0</strong><span>تحتاج مراجعة</span></article></div>
-        <div class="dashboard-grid"><section class="panel"><div class="panel-head"><div><small>المحتوى</small><h2>آخر التعديلات</h2></div><button class="text-btn" data-jump="articles">عرض الكل ←</button></div><div id="recentList" class="content-list"></div></section><section class="panel quick-panel"><div class="panel-head"><div><small>إجراء سريع</small><h2>ابدأ الكتابة</h2></div></div><button class="quick-card" data-type="article"><span>▤</span><div><b>مقال جديد</b><small>عنوان، مقدمة، محتوى وSEO</small></div><i>←</i></button><button class="quick-card" data-type="case-study"><span>◫</span><div><b>دراسة حالة جديدة</b><small>التحدي، المنهج، التنفيذ والنتائج</small></div><i>←</i></button></section></div>
+    <main class="workspace" id="overview">
+      <header class="topbar"><button class="mobile-menu" aria-label="فتح القائمة">☰</button><div><small>لوحة إدارة المحتوى</small><h1>مركز النشر</h1></div><div class="top-actions"><a class="btn secondary" href="../articles.html">عرض الموقع</a><a class="btn primary" href="https://app.pagescms.org" target="_blank" rel="noopener">فتح لوحة النشر ↗</a></div></header>
+      <section class="view active">
+        <div class="stats"><article><small>المستودع</small><strong>LIVE</strong><span>GitHub Pages</span></article><article><small>أنواع المحتوى</small><strong>02</strong><span>مقالات ودراسات حالة</span></article><article><small>مقاس الغلاف</small><strong>16:9</strong><span>1600 × 900 بكسل</span></article></div>
+        <div class="dashboard-grid">
+          <section class="panel"><div class="panel-head"><div><small>خطوات أول استخدام</small><h2>اربط لوحة النشر مرة واحدة</h2></div></div><div class="content-list"><div class="content-item"><span class="content-icon">01</span><div><b>افتح لوحة النشر</b><small>سجّل الدخول بحساب GitHub نفسه.</small></div></div><div class="content-item"><span class="content-icon">02</span><div><b>اختر المستودع</b><small>mohamedsherif-marketing.github.io</small></div></div><div class="content-item"><span class="content-icon">03</span><div><b>ابدأ الكتابة</b><small>اختر المقالات أو دراسات الحالة ثم «إنشاء».</small></div></div></div><a class="btn primary studio-launch" href="https://app.pagescms.org" target="_blank" rel="noopener">ابدأ الربط والنشر ↗</a></section>
+          <section class="panel quick-panel"><div class="panel-head"><div><small>قواعد التصميم</small><h2>القالب يحمي الهوية</h2></div></div><div class="quick-card"><span>▤</span><div><b>تنسيق تلقائي</b><small>العناوين والفقرات والمسافات تأخذ ثيم الموقع تلقائيًا.</small></div></div><div class="quick-card"><span>◫</span><div><b>ألوان محددة</b><small>اختيار بين الأخضر والسماوي فقط؛ بدون ألوان عشوائية.</small></div></div><div class="quick-card"><span>◉</span><div><b>صور منظمة</b><small>غلاف 1600×900، والصور الداخلية تُرفع من المحرر.</small></div></div></section>
+        </div>
       </section>
-
-      <section class="view" id="libraryView"><div class="library-toolbar"><div class="search"><span>⌕</span><input id="searchInput" placeholder="ابحث في المحتوى..."></div><select id="statusFilter"><option value="all">كل الحالات</option><option value="published">منشور</option><option value="draft">مسودة</option></select></div><div id="libraryList" class="table"></div></section>
-
-      <section class="view" id="mediaView"><div class="empty-state"><div>◉</div><h2>مكتبة الوسائط</h2><p>ستظهر هنا صور الأغلفة والصور الداخلية بعد ربط المستودع بحساب GitHub.</p><label class="btn secondary disabled">رفع صورة<input type="file" disabled hidden></label></div></section>
     </main>
   </div>
-
-  <dialog id="editorDialog">
-    <form method="dialog" class="editor" id="editorForm">
-      <header><div><small id="editorKicker">محتوى جديد</small><h2 id="editorTitle">إنشاء محتوى</h2></div><button class="close-btn" value="cancel" aria-label="إغلاق">×</button></header>
-      <div class="editor-body">
-        <div class="editor-main">
-          <label>العنوان<input id="contentTitle" required placeholder="اكتب عنوانًا واضحًا..."></label>
-          <label>الملخص<textarea id="contentExcerpt" rows="3" placeholder="ملخص قصير يظهر في بطاقة المحتوى"></textarea></label>
-          <label>المحتوى<textarea id="contentBody" class="body-editor" rows="15" placeholder="اكتب المحتوى هنا... استخدم سطرًا فارغًا بين كل فقرة وأخرى"></textarea></label>
-        </div>
-        <aside class="editor-settings">
-          <label>نوع المحتوى<select id="contentType"><option value="article">مقال</option><option value="case-study">دراسة حالة</option></select></label>
-          <label>الحالة<select id="contentStatus"><option value="draft">مسودة</option><option value="published">منشور</option></select></label>
-          <label>التصنيف<select id="contentCategory"><option>إعلانات ممولة</option><option>صناعة المحتوى</option><option>ذكاء اصطناعي</option><option>تحليل أداء</option><option>Workflows</option></select></label>
-          <label>الرابط المختصر<input id="contentSlug" dir="ltr" placeholder="article-slug"></label>
-          <label>وصف SEO<textarea id="contentSeo" rows="4" maxlength="160" placeholder="وصف لا يتجاوز 160 حرفًا"></textarea><small><span id="seoCount">0</span>/160</small></label>
-          <label>صورة الغلاف<input id="coverImage" type="file" accept="image/*"></label>
-          <div id="coverPreview" class="cover-preview">لا توجد صورة</div>
-        </aside>
-      </div>
-      <footer><div id="saveStatus"></div><button class="btn secondary" type="button" id="previewBtn">معاينة</button><button class="btn secondary" type="button" id="saveDraft">حفظ المسودة</button><button class="btn primary" type="submit" id="publishBtn">حفظ المحتوى</button></footer>
-    </form>
-  </dialog>
-
-  <dialog id="previewDialog"><div class="preview-shell"><header><span>معاينة المحتوى</span><button class="close-btn" onclick="this.closest('dialog').close()">×</button></header><article id="previewContent"></article></div></dialog>
-  <script src="admin.js"></script>
+  <script>document.querySelector('.mobile-menu').onclick=()=>document.querySelector('.sidebar').classList.toggle('open')</script>
 </body>
 </html>

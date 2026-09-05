@@ -1,0 +1,8 @@
+.card-cover{width:100%;aspect-ratio:16/9;object-fit:cover;margin-bottom:22px;border:1px solid var(--line)}
+.content-hero{position:relative}
+.content-cover{width:100%;aspect-ratio:16/9;object-fit:cover;margin-bottom:42px;border:1px solid var(--line)}
+.content-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.content-meta span{border:1px solid var(--line);padding:7px 11px;color:#8f9baa;font-size:12px}
+.accent-cyan .page-hero h1 span,.accent-cyan .section-label,.accent-cyan .prose a{color:var(--cyan)}
+.accent-cyan .prose blockquote{border-color:var(--cyan)}
+@media(max-width:560px){.content-cover{margin-bottom:28px}.content-meta{margin-top:20px}}

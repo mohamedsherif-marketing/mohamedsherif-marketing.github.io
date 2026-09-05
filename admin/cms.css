@@ -1,0 +1,4 @@
+.side-link{text-decoration:none}
+.studio-launch{display:inline-flex;margin-top:24px}
+.quick-card{cursor:default}
+@media(max-width:650px){.top-actions{display:flex;gap:8px;flex-wrap:wrap}.top-actions .btn{font-size:11px}}

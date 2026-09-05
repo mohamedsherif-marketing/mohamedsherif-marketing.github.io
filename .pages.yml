@@ -1,0 +1,190 @@
+media:
+  - name: covers
+    label: صور الأغلفة 16:9
+    input: assets/uploads/covers
+    output: /assets/uploads/covers
+    rename: safe
+    extensions: [jpg, jpeg, png, webp]
+  - name: content_images
+    label: صور داخل المحتوى
+    input: assets/uploads/content
+    output: /assets/uploads/content
+    rename: safe
+    extensions: [jpg, jpeg, png, webp]
+
+content:
+  - name: articles
+    label: المقالات
+    type: collection
+    path: _articles
+    format: yaml-frontmatter
+    filename:
+      template: "{year}-{month}-{day}-{primary}.md"
+      field: create
+    view:
+      primary: title
+      fields: [title, status, category, date]
+      sort: date
+      order: desc
+    fields:
+      - name: title
+        label: عنوان المقال
+        type: string
+        required: true
+      - name: excerpt
+        label: الملخص الظاهر في البطاقة
+        type: text
+        required: true
+        options:
+          maxlength: 220
+      - name: date
+        label: تاريخ النشر
+        type: date
+        required: true
+      - name: status
+        label: حالة المحتوى
+        type: select
+        required: true
+        options:
+          values:
+            - name: draft
+              label: مسودة — غير ظاهرة
+            - name: published
+              label: منشور — ظاهر على الموقع
+      - name: category
+        label: التصنيف
+        type: select
+        required: true
+        options:
+          values: [إعلانات ممولة, صناعة المحتوى, ذكاء اصطناعي, تحليل أداء, Workflows]
+      - name: category_key
+        label: فلتر القسم
+        type: select
+        required: true
+        options:
+          values:
+            - name: ads
+              label: إعلانات
+            - name: content
+              label: محتوى
+            - name: ai
+              label: AI
+      - name: read_time
+        label: مدة القراءة
+        type: string
+        description: "مثال: 8 دقائق"
+      - name: cover
+        label: صورة الغلاف
+        type: image
+        description: الأفضل 1600×900 بنسبة 16:9، JPG أو WebP.
+        options:
+          media: covers
+          rename: safe
+      - name: highlight_color
+        label: لون التمييز
+        type: select
+        required: true
+        options:
+          values:
+            - name: lime
+              label: أخضر الهوية
+            - name: cyan
+              label: سماوي الهوية
+      - name: seo_description
+        label: وصف محركات البحث SEO
+        type: text
+        description: اكتب من 120 إلى 160 حرفًا.
+        options:
+          maxlength: 160
+      - name: body
+        label: محتوى المقال
+        type: rich-text
+        required: true
+        options:
+          format: markdown
+          media: content_images
+          rename: safe
+          switcher: false
+
+  - name: case_studies
+    label: دراسات الحالة
+    type: collection
+    path: _case_studies
+    format: yaml-frontmatter
+    filename:
+      template: "{primary}.md"
+      field: create
+    view:
+      primary: title
+      fields: [title, status, industry, date]
+      sort: date
+      order: desc
+    fields:
+      - name: title
+        label: اسم المشروع أو البراند
+        type: string
+        required: true
+      - name: excerpt
+        label: ملخص دراسة الحالة
+        type: text
+        required: true
+        options:
+          maxlength: 220
+      - name: date
+        label: تاريخ الإضافة
+        type: date
+        required: true
+      - name: status
+        label: حالة المحتوى
+        type: select
+        required: true
+        options:
+          values:
+            - name: draft
+              label: مسودة — غير ظاهرة
+            - name: published
+              label: منشور — ظاهر على الموقع
+      - name: industry
+        label: القطاع
+        type: string
+        description: "مثال: E-COMMERCE أو F&B"
+      - name: scope_label
+        label: نوع المشروع
+        type: string
+        description: "مثال: FULL FUNNEL أو CREATIVE SYSTEM"
+      - name: tags
+        label: نطاق العمل
+        type: string
+        list: true
+        description: "مثال: Media Buying، Tracking، Content Strategy"
+      - name: cover
+        label: صورة الغلاف
+        type: image
+        description: الأفضل 1600×900 بنسبة 16:9، JPG أو WebP.
+        options:
+          media: covers
+          rename: safe
+      - name: highlight_color
+        label: لون التمييز
+        type: select
+        required: true
+        options:
+          values:
+            - name: lime
+              label: أخضر الهوية
+            - name: cyan
+              label: سماوي الهوية
+      - name: seo_description
+        label: وصف محركات البحث SEO
+        type: text
+        options:
+          maxlength: 160
+      - name: body
+        label: تفاصيل دراسة الحالة
+        type: rich-text
+        required: true
+        options:
+          format: markdown
+          media: content_images
+          rename: safe
+          switcher: false

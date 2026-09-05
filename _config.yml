@@ -1,0 +1,26 @@
+title: Mohamed Sherif
+description: AI-Driven Digital Marketer, Media Buyer & Creative Strategist
+url: https://mohamedsherif-marketing.github.io
+lang: ar
+collections:
+  articles:
+    output: true
+    permalink: /articles/:name/
+  case_studies:
+    output: true
+    permalink: /case-studies/:name/
+defaults:
+  - scope:
+      path: ""
+      type: articles
+    values:
+      layout: content
+      content_type: article
+  - scope:
+      path: ""
+      type: case_studies
+    values:
+      layout: content
+      content_type: case-study
+exclude:
+  - README.md
