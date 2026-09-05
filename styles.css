@@ -27,3 +27,5 @@ main,header,footer,section,.container,.hero,.hero-copy,.hero-visual,.nav,.page-s
   .content-card,.service,.article,.case,.tip-row,.prose{min-width:0;max-width:100%}
   .prose img,.content-cover,.card-cover{width:100%}
 }
+
+.footer-socials{display:flex;gap:1.25rem;flex-wrap:wrap}.footer-socials a{color:#8d98a6;text-decoration:none}.footer-socials a:hover{color:var(--lime)}@media(max-width:560px){.footer-socials{justify-content:center;margin-top:.75rem;gap:1rem}}
