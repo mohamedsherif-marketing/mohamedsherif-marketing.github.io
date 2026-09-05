@@ -9,6 +9,9 @@ collections:
   case_studies:
     output: true
     permalink: /case-studies/:name/
+  landing_pages:
+    output: true
+    permalink: /landing/:name/
 defaults:
   - scope:
       path: ""
@@ -22,5 +25,10 @@ defaults:
     values:
       layout: content
       content_type: case-study
+  - scope:
+      path: ""
+      type: landing_pages
+    values:
+      layout: landing
 exclude:
   - README.md
