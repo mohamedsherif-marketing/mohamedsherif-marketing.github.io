@@ -337,6 +337,118 @@ content:
         type: text
         options:
           maxlength: 160
+      - name: problem_title
+        label: قسم المشكلة — العنوان
+        type: string
+        description: اتركه فارغًا لإخفاء القسم.
+      - name: problem_text
+        label: قسم المشكلة — الوصف
+        type: text
+      - name: problem_points
+        label: مشكلات العميل
+        type: string
+        list: true
+      - name: solution_title
+        label: قسم الحل — العنوان
+        type: string
+        description: اتركه فارغًا لإخفاء القسم.
+      - name: solution_text
+        label: قسم الحل — الوصف
+        type: text
+      - name: services_title
+        label: قسم ما يشمله العرض — العنوان
+        type: string
+      - name: services
+        label: عناصر العرض
+        type: string
+        list: true
+      - name: mid_cta_title
+        label: CTA منتصف الصفحة — العنوان
+        type: string
+      - name: mid_cta_text
+        label: CTA منتصف الصفحة — الوصف
+        type: text
+      - name: mid_cta_button
+        label: CTA منتصف الصفحة — الزر
+        type: string
+      - name: case_title
+        label: قسم دراسة الحالة — العنوان
+        type: string
+        description: لا تضف نتائج غير موثقة.
+      - name: case_text
+        label: دراسة الحالة — الوصف
+        type: text
+      - name: metric_1_value
+        label: النتيجة الأولى — الرقم
+        type: string
+      - name: metric_1_label
+        label: النتيجة الأولى — الوصف
+        type: string
+      - name: metric_2_value
+        label: النتيجة الثانية — الرقم
+        type: string
+      - name: metric_2_label
+        label: النتيجة الثانية — الوصف
+        type: string
+      - name: metric_3_value
+        label: النتيجة الثالثة — الرقم
+        type: string
+      - name: metric_3_label
+        label: النتيجة الثالثة — الوصف
+        type: string
+      - name: testimonial_title
+        label: قسم رأي العميل — العنوان
+        type: string
+      - name: testimonial_quote
+        label: نص رأي العميل
+        type: text
+      - name: testimonial_name
+        label: اسم العميل
+        type: string
+      - name: testimonial_role
+        label: وصف العميل أو المشروع
+        type: string
+      - name: fit_title
+        label: قسم لمن تناسب الخدمة — العنوان
+        type: string
+      - name: fit_for
+        label: الخدمة مناسبة لـ
+        type: string
+        list: true
+      - name: not_for
+        label: الخدمة ليست مناسبة لـ
+        type: string
+        list: true
+      - name: faq_title
+        label: قسم الأسئلة الشائعة — العنوان
+        type: string
+      - name: faq_1_q
+        label: السؤال الأول
+        type: string
+      - name: faq_1_a
+        label: إجابة السؤال الأول
+        type: text
+      - name: faq_2_q
+        label: السؤال الثاني
+        type: string
+      - name: faq_2_a
+        label: إجابة السؤال الثاني
+        type: text
+      - name: faq_3_q
+        label: السؤال الثالث
+        type: string
+      - name: faq_3_a
+        label: إجابة السؤال الثالث
+        type: text
+      - name: final_cta_title
+        label: CTA النهائي — العنوان
+        type: string
+      - name: final_cta_text
+        label: CTA النهائي — الوصف
+        type: text
+      - name: final_cta_button
+        label: CTA النهائي — الزر
+        type: string
       - name: body
         label: محتوى إضافي اختياري
         type: rich-text
