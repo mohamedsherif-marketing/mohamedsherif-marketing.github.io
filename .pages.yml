@@ -208,3 +208,164 @@ content:
           media: content_images
           rename: safe
           switcher: false
+
+  - name: landing_pages
+    label: Landing Pages
+    type: collection
+    path: _landing_pages
+    format: yaml-frontmatter
+    filename:
+      template: "{primary}.md"
+      field: create
+    view:
+      primary: title
+      fields: [title, status, service_name]
+    fields:
+      - name: title
+        label: اسم الصفحة داخل اللوحة
+        type: string
+        required: true
+      - name: status
+        label: حالة الصفحة
+        type: select
+        required: true
+        options:
+          values:
+            - name: draft
+              label: مسودة — غير مفهرسة
+            - name: published
+              label: منشورة
+      - name: slug
+        label: رابط الصفحة بالإنجليزي
+        type: string
+        required: true
+        description: "مثال: media-buying"
+      - name: service_name
+        label: اسم الخدمة للتتبع
+        type: string
+        required: true
+        description: "مثال: media_buying"
+      - name: eyebrow
+        label: السطر الصغير أعلى العنوان
+        type: string
+      - name: headline
+        label: العنوان الرئيسي
+        type: string
+        required: true
+      - name: headline_accent
+        label: الجزء الأخضر من العنوان
+        type: string
+        required: true
+      - name: lead
+        label: وصف العرض
+        type: text
+        required: true
+      - name: cover
+        label: صورة أو غلاف الصفحة
+        type: image
+        description: الأفضل 1600×900 أو WebP.
+        options:
+          media: covers
+          rename: safe
+      - name: cover_alt
+        label: وصف الصورة
+        type: string
+      - name: tags
+        label: المنصات أو نقاط الثقة
+        type: string
+        list: true
+      - name: nav_cta
+        label: زر أعلى الصفحة
+        type: string
+      - name: form_title
+        label: عنوان نموذج الطلب
+        type: string
+      - name: form_intro
+        label: وصف نموذج الطلب
+        type: text
+      - name: budget_options
+        label: اختيارات الميزانية
+        type: string
+        list: true
+      - name: cta_text
+        label: نص زر الإرسال
+        type: string
+      - name: benefit_1_title
+        label: الميزة الأولى — العنوان
+        type: string
+      - name: benefit_1_text
+        label: الميزة الأولى — الوصف
+        type: string
+      - name: benefit_2_title
+        label: الميزة الثانية — العنوان
+        type: string
+      - name: benefit_2_text
+        label: الميزة الثانية — الوصف
+        type: string
+      - name: benefit_3_title
+        label: الميزة الثالثة — العنوان
+        type: string
+      - name: benefit_3_text
+        label: الميزة الثالثة — الوصف
+        type: string
+      - name: section_title
+        label: عنوان خطوات العمل
+        type: string
+      - name: step_1_title
+        label: الخطوة الأولى — العنوان
+        type: string
+      - name: step_1_text
+        label: الخطوة الأولى — الوصف
+        type: text
+      - name: step_2_title
+        label: الخطوة الثانية — العنوان
+        type: string
+      - name: step_2_text
+        label: الخطوة الثانية — الوصف
+        type: text
+      - name: step_3_title
+        label: الخطوة الثالثة — العنوان
+        type: string
+      - name: step_3_text
+        label: الخطوة الثالثة — الوصف
+        type: text
+      - name: seo_title
+        label: عنوان SEO
+        type: string
+      - name: seo_description
+        label: وصف SEO
+        type: text
+        options:
+          maxlength: 160
+      - name: body
+        label: محتوى إضافي اختياري
+        type: rich-text
+        options:
+          format: markdown
+          media: content_images
+          rename: safe
+          switcher: false
+
+  - name: tracking_settings
+    label: إعدادات التتبع
+    type: file
+    path: _data/tracking.yml
+    format: yaml
+    fields:
+      - name: gtm
+        label: Google Tag Manager ID
+        type: string
+        description: "مثال: GTM-XXXXXXX"
+      - name: ga4
+        label: GA4 Measurement ID
+        type: string
+        description: "مثال: G-XXXXXXXXXX"
+      - name: meta_pixel
+        label: Meta Pixel ID
+        type: string
+      - name: tiktok_pixel
+        label: TikTok Pixel ID
+        type: string
+      - name: snap_pixel
+        label: Snapchat Pixel ID
+        type: string
