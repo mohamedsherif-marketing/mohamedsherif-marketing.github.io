@@ -5,7 +5,7 @@ slug: media-buying
 service_name: media_buying
 eyebrow: PERFORMANCE MARKETING × AI
 headline: حملات إعلانية تنمو بالأرقام.
-headline_accent: قراراتها محسوبة.
+headline_accent: تنمو بالأرقام.
 lead: "أدير حملاتك من فهم السوق والعرض إلى تطوير الكرييتف والتحسين المستمر، بهدف
   واضح: نتائج تجارية قابلة للقياس وليست أرقامًا معزولة."
 cover_alt: محمد شريف — إدارة الحملات الإعلانية
