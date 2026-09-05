@@ -1,0 +1,11 @@
+html[dir="rtl"] h1,html[dir="rtl"] h2,html[dir="rtl"] h3{letter-spacing:0;word-spacing:.06em}
+h1{line-height:1.16;margin-block:1.35rem 1.75rem}
+h2{line-height:1.3;margin-block:1rem 1.4rem}
+h3{line-height:1.45;margin-block:.7rem 1rem}
+p{line-height:1.95;margin-block:0 1.15rem}
+.hero-copy>p,.page-hero p,.about-copy p,.prose{max-width:42rem}
+.nav-links a{white-space:nowrap}
+.section-head{gap:3rem}.section-head>p{margin-bottom:.5rem}
+.article-body h3{margin-block:.75rem .65rem}.article-body p{margin-bottom:1rem}
+@media(max-width:900px){.section-head{gap:1.5rem}.page-hero{padding-block:3rem 4.5rem}.content-section{padding-block:4.5rem}}
+@media(max-width:560px){body{line-height:1.8}p{line-height:1.85}.hero-copy>p,.page-hero p{font-size:1rem}.page-hero h1{line-height:1.18;margin-bottom:1.5rem}.section-head h2{margin-bottom:1.25rem}.content-card{padding:1.4rem}}
