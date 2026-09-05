@@ -5,4 +5,9 @@
 .content-meta span{border:1px solid var(--line);padding:7px 11px;color:#8f9baa;font-size:12px}
 .accent-cyan .page-hero h1 span,.accent-cyan .section-label,.accent-cyan .prose a{color:var(--cyan)}
 .accent-cyan .prose blockquote{border-color:var(--cyan)}
+.content-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:56px}
+.content-gallery figure{margin:0;overflow:hidden;border:1px solid var(--line);background:var(--surface)}
+.content-gallery figure:first-child:nth-last-child(odd){grid-column:1/-1}
+.content-gallery img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover}
 @media(max-width:560px){.content-cover{margin-bottom:28px}.content-meta{margin-top:20px}}
+@media(max-width:640px){.content-gallery{grid-template-columns:1fr;gap:12px}.content-gallery figure:first-child:nth-last-child(odd){grid-column:auto}}

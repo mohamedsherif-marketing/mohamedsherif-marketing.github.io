@@ -80,6 +80,16 @@ content:
         options:
           media: covers
           rename: safe
+      - name: gallery
+        label: صور إضافية داخل المقال
+        type: image
+        description: ارفع حتى 12 صورة. الأفضل 1400×933 بنسبة 3:2؛ وستظهر تلقائيًا بعد نص المقال.
+        options:
+          media: content_images
+          multiple:
+            max: 12
+          unique: true
+          rename: safe
       - name: highlight_color
         label: لون التمييز
         type: select
@@ -163,6 +173,16 @@ content:
         description: الأفضل 1600×900 بنسبة 16:9، JPG أو WebP.
         options:
           media: covers
+          rename: safe
+      - name: gallery
+        label: صور إضافية داخل دراسة الحالة
+        type: image
+        description: ارفع صور النتائج والتصاميم ولقطات الشاشة. ستظهر تلقائيًا بعد التفاصيل.
+        options:
+          media: content_images
+          multiple:
+            max: 16
+          unique: true
           rename: safe
       - name: highlight_color
         label: لون التمييز
