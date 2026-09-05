@@ -1,9 +1,12 @@
-/* Tracking hub — add platform IDs below to activate vendor pixels. */
+---
+---
+/* Tracking hub — managed from Content Studio. */
 window.MS_TRACKING_CONFIG={
-  ga4:"",
-  metaPixel:"",
-  tiktokPixel:"",
-  snapPixel:""
+  ga4:"{{ site.data.tracking.ga4 | default: '' | escape }}",
+  metaPixel:"{{ site.data.tracking.meta_pixel | default: '' | escape }}",
+  tiktokPixel:"{{ site.data.tracking.tiktok_pixel | default: '' | escape }}",
+  snapPixel:"{{ site.data.tracking.snap_pixel | default: '' | escape }}",
+  gtm:"{{ site.data.tracking.gtm | default: '' | escape }}"
 };
 (function(){
   const c=window.MS_TRACKING_CONFIG||{};
@@ -17,6 +20,9 @@ window.MS_TRACKING_CONFIG={
     if(typeof window.snaptr==="function") window.snaptr("track",event,params||{});
   };
   const load=(src,id)=>{if(id&&document.querySelector('script[data-ms="'+id+'"]')===null){const s=document.createElement("script");s.async=true;s.src=src;s.dataset.ms=id;document.head.appendChild(s)}};
+  if(c.gtm){
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!=="dataLayer"?"&l="+l:"";j.async=true;j.src="https://www.googletagmanager.com/gtm.js?id="+i+dl;j.dataset.ms="gtm";f.parentNode.insertBefore(j,f)})(window,document,"script","dataLayer",c.gtm);
+  }
   if(c.ga4){
     load("https://www.googletagmanager.com/gtag/js?id="+encodeURIComponent(c.ga4),"ga4");
     window.gtag=function(){dataLayer.push(arguments)};gtag("js",new Date());gtag("config",c.ga4);
