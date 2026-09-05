@@ -28,4 +28,4 @@ main,header,footer,section,.container,.hero,.hero-copy,.hero-visual,.nav,.page-s
   .prose img,.content-cover,.card-cover{width:100%}
 }
 
-.footer-socials{display:flex;gap:1.25rem;flex-wrap:wrap}.footer-socials a{color:#8d98a6;text-decoration:none}.footer-socials a:hover{color:var(--lime)}@media(max-width:560px){.footer-socials{justify-content:center;margin-top:.75rem;gap:1rem}}
+.footer-identity{display:flex;flex-direction:column;gap:.2rem}.footer-socials{display:flex;align-items:center;gap:.65rem;flex-wrap:wrap}.footer-socials a{width:2.5rem;height:2.5rem;display:grid;place-items:center;color:#8d98a6;text-decoration:none;border:1px solid var(--line);border-radius:50%;transition:.2s}.footer-socials svg{width:1.1rem;height:1.1rem;fill:currentColor}.footer-socials a:hover{color:#090c10;background:var(--lime);border-color:var(--lime)}@media(max-width:560px){footer .container{display:flex;align-items:center;gap:1.25rem}.footer-identity{align-items:center}.footer-socials{justify-content:center;gap:.7rem}.footer-socials a{width:2.65rem;height:2.65rem}}
