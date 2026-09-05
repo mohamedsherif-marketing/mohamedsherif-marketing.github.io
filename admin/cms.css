@@ -2,3 +2,7 @@
 .studio-launch{display:inline-flex;margin-top:24px}
 .quick-card{cursor:default}
 @media(max-width:650px){.top-actions{display:flex;gap:8px;flex-wrap:wrap}.top-actions .btn{font-size:11px}}
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+.app-shell,.workspace,.topbar,.dashboard-grid,.panel{min-width:0;max-width:100%}
+@supports(overflow:clip){html,body{overflow-x:clip}}
+@media(max-width:650px){.workspace{width:100%;padding-inline:14px}.topbar{width:100%;flex-wrap:wrap}.top-actions{max-width:100%}.top-actions .btn{white-space:normal;text-align:center}.content-item{grid-template-columns:42px minmax(0,1fr)}.content-item>*:last-child{grid-column:2}.quick-card{grid-template-columns:42px minmax(0,1fr)}.quick-card i{display:none}}

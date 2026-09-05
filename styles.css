@@ -9,3 +9,21 @@ p,li{line-height:1.95}section{scroll-margin-top:6rem}.section{padding-block:clam
 .content-card h2,.tip-row h2,.case-title h3{overflow-wrap:anywhere}.article-body{display:flex;flex-direction:column;gap:.65rem}.article-body>*{margin-block:0!important}
 @media(max-width:1150px){.nav-links{position:absolute;top:78px;left:0;right:0;background:#0b0f15;display:none;flex-direction:column;padding:28px;gap:20px!important;border-bottom:1px solid var(--line)}.nav-links.open{display:flex}.menu-btn{display:block}}
 @media(max-width:700px){.container{width:min(100% - 32px,var(--max))}.page-shell{padding-top:5rem!important}.page-hero h1{font-size:clamp(2.45rem,13vw,4rem)!important}.page-hero p{font-size:1rem!important}.section{padding-block:5.25rem}.content-section{padding-block:4.75rem!important}.service,.content-card{min-height:0!important}.article-layout{gap:3rem!important}.prose h2{margin-top:3.75rem!important}.workflow-node{min-height:0!important}}
+
+/* Mobile horizontal-overflow guard */
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+img,video,svg,canvas,iframe{max-width:100%;height:auto}
+pre,table{max-width:100%;overflow-x:auto}
+main,header,footer,section,.container,.hero,.hero-copy,.hero-visual,.nav,.page-shell{min-width:0;max-width:100%}
+@supports(overflow:clip){html,body{overflow-x:clip}}
+@media(max-width:700px){
+  .container{width:calc(100% - 32px)}
+  .hero{width:100%;overflow:hidden}
+  .hero-visual{width:100%;overflow:hidden}
+  .orbit-a{width:min(360px,96vw);height:min(360px,96vw)}
+  .orbit-b{width:min(400px,108vw);max-width:none}
+  .metric-card{max-width:44vw;min-width:0}
+  .workflow,.workflow-canvas,.collection-grid,.services-grid,.articles-grid{width:100%;min-width:0}
+  .content-card,.service,.article,.case,.tip-row,.prose{min-width:0;max-width:100%}
+  .prose img,.content-cover,.card-cover{width:100%}
+}
